@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>KNN Predictor (Colab Model)</h2>
+
+<form method="post" action="/predict">
+  <input type="number" name="hours" placeholder="Enter hours">
+  <button type="submit">Predict</button>
+</form>
+
+{% if result %}
+<h3>Result: {{ result }}</h3>
+{% endif %}
+
+</body>
+</html>
