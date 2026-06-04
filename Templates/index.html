@@ -1,17 +1,27 @@
 <!DOCTYPE html>
 <html>
+<head>
+    <title>KNN Predictor</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
 <body>
 
-<h2>KNN Predictor (Colab Model)</h2>
+<div class="container">
 
-<form method="post" action="/predict">
-  <input type="number" name="hours" placeholder="Enter hours">
-  <button type="submit">Predict</button>
-</form>
+    <h1>KNN Predictor</h1>
 
-{% if result %}
-<h3>Result: {{ result }}</h3>
-{% endif %}
+    <form method="post" action="/predict">
+        <input type="number" name="hours" placeholder="Enter hours" required>
+        <button type="submit">Predict</button>
+    </form>
+
+    {% if result %}
+        <div class="result">
+            Result: {{ result }}
+        </div>
+    {% endif %}
+
+</div>
 
 </body>
 </html>
